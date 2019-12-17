@@ -1,0 +1,37 @@
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
+class MergeSortTest {
+
+    @org.junit.jupiter.api.Test
+    void testSortedEmpty() {
+        int[] testEmpty = new int[0];
+        Assertions.assertTrue(MergeSort.sorted(testEmpty));
+    }
+    @Test
+    void testSorted1() {
+        int[] Sorted1test = {1,2,3};
+        Assertions.assertTrue(MergeSort.sorted(Sorted1test));
+    }
+    @Test
+    void testSorted2() {
+        int[] testSorted2 = {4,5,6};
+        Assertions.assertTrue(MergeSort.sorted(testSorted2));
+    }
+    @Test
+    void testUnsorted1() {
+        int[] testUnsorted1 = {3,5,1};
+        Assertions.assertFalse(MergeSort.sorted(testUnsorted1));
+    }
+    @Test
+    void TestUnsorted2()
+    {
+        int[] testUnsorted2 = {32,25,4};
+        Assertions.assertFalse(MergeSort.sorted(testUnsorted2));
+    }
+    @Test
+    void testSameNumbers() {
+        int[] testSameNumbers = {7,7,7};
+        Assertions.assertTrue(MergeSort.sorted(testSameNumbers));
+    }
+    }
